@@ -1,0 +1,6 @@
+domain\BankAccount.class
+domain\Transaction.class
+at\itkolleg\sample\MainController.class
+at\itkolleg\sample\Main.class
+domain\CryptoCurrency.class
+exceptions\InsufficientBalanceException.class
