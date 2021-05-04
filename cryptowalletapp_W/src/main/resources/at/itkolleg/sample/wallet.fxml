@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane stylesheets="@wallet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ui.WalletController">
+    <VBox styleClass="box" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" prefHeight="500">
+        <Pane>
+            <Label layoutX="10" layoutY="9" text="%lblId.text"/>
+            <Label fx:id="lblId" layoutX="124" layoutY="9" text="Label"/>
+
+            <Label layoutX="10" layoutY="34" text="%lblName.text" styleClass="importantText"/>
+            <Label fx:id="lblName" layoutX="124" layoutY="34" text="Label" styleClass="importantText"/>
+
+            <Label layoutX="10" layoutY="67" text="%lblCurrency.text"/>
+            <Label fx:id="lblCurrency" layoutX="124" layoutY="67" text="Label"/>
+
+            <Label layoutX="10" layoutY="98" text="%lblFee.text"/>
+            <Label fx:id="lblFee" layoutX="124" layoutY="98" text="Label"/>
+
+            <Label layoutX="10" layoutY="113" text="%lblAmount.text"/>
+            <Label fx:id="lblAmount" layoutX="124" layoutY="113" text="Label"/>
+
+            <Label layoutX="10" layoutY="135" text="%lblValue.text"/>
+            <Label fx:id="lblValue" layoutX="124" layoutY="135" text="Label"/>
+        </Pane>
+
+        <TableView fx:id="tblTransactions" prefHeight="100" prefWidth="600"/>
+
+        <HBox>
+            <Button onAction="#buy" text="%btnBuy.text"/>
+            <Button onAction="#sell" text="%btnSell.text"/>
+        </HBox>
+
+        <Button fx:id="btnBackToMain" text="%btnBack.text" styleClass="naviButton"/>
+    </VBox>
+</AnchorPane>
