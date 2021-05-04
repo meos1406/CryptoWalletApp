@@ -1,0 +1,14 @@
+C:\Users\OslMelanie\Desktop\cryptowalletapp\src\main\java\at\itkolleg\sample\Main.java
+C:\Users\OslMelanie\Desktop\cryptowalletapp\src\main\java\domain\Transaction.java
+C:\Users\OslMelanie\Desktop\cryptowalletapp\src\main\java\domain\CurrentPriceForCurrency.java
+C:\Users\OslMelanie\Desktop\cryptowalletapp\src\main\java\at\itkolleg\sample\MainController.java
+C:\Users\OslMelanie\Desktop\cryptowalletapp\src\main\java\exceptions\GetCurrentPriceException.java
+C:\Users\OslMelanie\Desktop\cryptowalletapp\src\main\java\domain\Wallet.java
+C:\Users\OslMelanie\Desktop\cryptowalletapp\src\main\java\exceptions\InsufficientAmountException.java
+C:\Users\OslMelanie\Desktop\cryptowalletapp\src\main\java\domain\WalletList.java
+C:\Users\OslMelanie\Desktop\cryptowalletapp\src\main\java\domain\CryptoCurrency.java
+C:\Users\OslMelanie\Desktop\cryptowalletapp\src\main\java\exceptions\InsufficientBalanceException.java
+C:\Users\OslMelanie\Desktop\cryptowalletapp\src\main\java\exceptions\InvalidAmountException.java
+C:\Users\OslMelanie\Desktop\cryptowalletapp\src\main\java\domain\BankAccount.java
+C:\Users\OslMelanie\Desktop\cryptowalletapp\src\main\java\exceptions\InvalidFeeException.java
+C:\Users\OslMelanie\Desktop\cryptowalletapp\src\main\java\infrastruktur\CurrentCurrencyPrices.java
