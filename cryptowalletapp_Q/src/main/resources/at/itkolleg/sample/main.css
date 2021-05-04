@@ -1,0 +1,9 @@
+.box {
+    -fx-spacing: 50;
+}
+
+.importantText {
+    -fx-fond-size: 1.5em;
+    -fx-text-fill: derive(#2125de, 30%);
+    -fx-font-weight: bold;
+}
