@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane stylesheets="@main.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ui.MainController">
+    <VBox styleClass="box" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" prefHeight="500">
+        <Pane>
+            <Label layoutX="0" layoutY="9" text="%lblBankaccount.text" styleClass="importantText"></Label>
+            <Label fx:id="lblBankaccountBalance" layoutX="0" layoutY="42" text="%lblBankaccountBalance.text"/>
+            <Button layoutX="0" layoutY="75" onAction="#deposit" text="%btnDeposit.text"/>
+            <Button layoutX="0" layoutY="108" onAction="#withdraw" text="%btnWithdraw.text"/>
+        </Pane>
+        <TableView fx:id="tableView" prefHeight="120" prefWidth="500"/>
+        <HBox>
+            <Button onAction="#openWallet" text="%btnWalletDetails.text"/>
+            <Button onAction="#newWallet" text="%btnNewWallet.text"/>
+            <ComboBox fx:id="cmbWalletCurrency" promptText="%cmbWalletCurrency.text"/>
+        </HBox>
+        <Button fx:id="btnClose" text="%btnClos.text" styleClass="naviButton"/>
+    </VBox>
+</AnchorPane>
