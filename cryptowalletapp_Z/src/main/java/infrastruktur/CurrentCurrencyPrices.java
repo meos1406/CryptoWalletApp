@@ -24,6 +24,9 @@ public class CurrentCurrencyPrices implements CurrentPriceForCurrency {
                 .build();
         try {
             HttpResponse<String> result = client.send(request, HttpResponse.BodyHandlers.ofString());
+            if (result.body().length()<=2){
+                throw new GetCurrentPriceException("No Data received.");
+            }
             String[] split = result.body().split(":");
             String result2 = split[2].substring(0, split[2].length() - 2);
             return new BigDecimal(result2);

@@ -1,13 +1,13 @@
 package domain;
 
 import exceptions.InsufficientBalanceException;
+import exceptions.InvalidAmountException;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class BankAccount implements Serializable {
-
     private BigDecimal balance;
 
     public BankAccount() {
@@ -18,20 +18,27 @@ public class BankAccount implements Serializable {
         return balance;
     }
 
-    public void deposit(BigDecimal amount) {
-        if (amount != null) {
-            this.balance = this.balance.add(amount).setScale(2, RoundingMode.HALF_UP);
-        }
+    private void setBalance(BigDecimal balance) {
+        this.balance = balance;
     }
 
-    public void withdraw(BigDecimal amount) throws InsufficientBalanceException {
-        if (amount != null) {
-            if (this.balance.subtract(amount).doubleValue() >= 0) {
-                this.balance = this.balance.subtract(amount).setScale(2, RoundingMode.HALF_UP);
-            } else {
-                throw new InsufficientBalanceException();
-            }
+    public void deposit(BigDecimal amount) throws InvalidAmountException {
+        if (amount == null) return;
+        if (amount.compareTo(BigDecimal.ZERO)<=0) {
+            throw new InvalidAmountException();
         }
+        this.setBalance(this.balance.add(amount));
+    }
+
+    public void withdraw(BigDecimal amount) throws InsufficientBalanceException, InvalidAmountException {
+        if (amount == null) return;
+        if (amount.compareTo(BigDecimal.ZERO)<=0) {
+            throw new InvalidAmountException();
+        }
+        if (this.balance.subtract(amount).setScale(2, RoundingMode.HALF_UP).compareTo(BigDecimal.ZERO) <= 0) {
+            throw new InsufficientBalanceException();
+        }
+        this.setBalance(this.balance.subtract(amount));
     }
 
     @Override

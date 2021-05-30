@@ -30,14 +30,14 @@ public enum CryptoCurrency implements Serializable {
     DASH("Dash"),
     DEX("DEX"),
     DGB("DigiByte"),
-    DOGE("DOGE"),
+    DOGE("Dogecoin"),
     ECA("Electra"),
     ETH("Ethereum"),
     FLASH("FLASH"),
     FTO("FuturoCoin"),
     GRS("Groestlcoin"),
     HATCH("Hatch"),
-    HBX("HBX"),
+    HBX("HashBX"),
     ILC("ILCoin"),
     KMD("Komodo"),
     JOB("Jobchain"),
@@ -79,7 +79,7 @@ public enum CryptoCurrency implements Serializable {
     XPM("Primecoin"),
     ZPAE("ZelaaPayAE");
 
-    private static Map<String, CryptoCurrency> cryptoCurrenciesUpperCase = new HashMap<>();
+    private static final Map<String, CryptoCurrency> cryptoCurrenciesUpperCase = new HashMap<>();
     private static Map<String, CryptoCurrency> cryptoCurrencies = new LinkedHashMap<>();
 
     // static initialisation block - runs once when class ist first loaded
@@ -103,14 +103,6 @@ public enum CryptoCurrency implements Serializable {
         this.code = (code == null) ? name() : code;
     }
 
-    public String getCurrencyName() {
-        return currencyName;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
     /**
      * Use this method instead of Enum.valueOf.
      */
@@ -124,5 +116,13 @@ public enum CryptoCurrency implements Serializable {
 
     public static Set<String> getCodes() {
         return cryptoCurrencies.keySet();
+    }
+
+    public String getCurrencyName() {
+        return currencyName;
+    }
+
+    public String getCode() {
+        return code;
     }
 }
